@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle de Partido</title>
+</head>
+<body>
+    <h1>Detalle de Partido</h1>
+    <h2>{{ partido }}</h2>
+    <ul>
+        {% for apuesta in apuestas %}
+            <li>{{ apuesta.usuario }} apostó {{ apuesta.monto }} a {{ apuesta.eleccion }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

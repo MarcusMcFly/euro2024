@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Realizar Apuesta</title>
+</head>
+<body>
+    <h1>Realizar Apuesta</h1>
+    <h2>{{ partido }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Add form fields for placing a bet -->
+        <button type="submit">Realizar Apuesta</button>
+    </form>
+</body>
+</html>
