@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings  # Importa settings.py para obtener AUTH_USER_MODEL
 
+
 # Modelo para la fase de grupos
 class FaseDeGrupos(models.Model):
     player = models.CharField(max_length=30)
