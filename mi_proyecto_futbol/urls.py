@@ -14,9 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
 # urls.py
-
 from django.contrib import admin
 from django.urls import path  # Importa la función path
 from futboledos import views
@@ -42,5 +40,7 @@ urlpatterns = [
     path('resultados/<int:resultado_id>/borrar/', views.borrar_resultado, name='borrar_resultado'),
     path('fase-de-grupos/', views.fase_de_grupos_view, name='fase_de_grupos'),
 ]
+
+
 
 
