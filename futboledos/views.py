@@ -1,7 +1,8 @@
 # Create your views here.
 
 from django.shortcuts import render, redirect
-from .models import Partido, Apuesta, Usuario, Equipo, Resultado
+from .models import Partido, Apuesta, Usuario, Equipo, Resultado, FaseDeGrupos
+
 
 def lista_partidos(request):
     partidos = Partido.objects.all()
@@ -96,5 +97,14 @@ def borrar_apuesta(request, partido_id):
 def index(request):
     # Your code here
     return render(request, 'index.html')
+
+# views.py
+
+
+def fase_de_grupos_view(request):
+    data = FaseDeGrupos.objects.all()
+    return render(request, 'fase_de_grupos.html', {'data': data})
+
+
 
 

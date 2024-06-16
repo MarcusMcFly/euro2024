@@ -5,6 +5,33 @@ from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings  # Importa settings.py para obtener AUTH_USER_MODEL
 
+# Modelo para la fase de grupos
+class FaseDeGrupos(models.Model):
+    player = models.CharField(max_length=30)
+    equipo_primero_grupo_A = models.CharField(max_length=50)
+    equipo_segundo_grupo_A = models.CharField(max_length=50)
+    equipo_primero_grupo_B = models.CharField(max_length=50)
+    equipo_segundo_grupo_B = models.CharField(max_length=50)
+    equipo_primero_grupo_C = models.CharField(max_length=50)
+    equipo_segundo_grupo_C = models.CharField(max_length=50)
+    equipo_primero_grupo_D = models.CharField(max_length=50)
+    equipo_segundo_grupo_D = models.CharField(max_length=50)
+    equipo_primero_grupo_E = models.CharField(max_length=50)
+    equipo_segundo_grupo_E = models.CharField(max_length=50)
+    equipo_primero_grupo_F = models.CharField(max_length=50)
+    equipo_segundo_grupo_F = models.CharField(max_length=50)
+    fecha_hora = models.DateTimeField()
+    note = models.TextField()
+    #created_by default field as "mcj"
+    created_by = models.CharField(max_length=30, default="mcj")
+    #"created_datetime" DATE DEFAULT CURRENT_TIMESTAMP
+    created_datetime = models.DateTimeField(auto_now_add=True)
+
+    # Método para mostrar el nombre del jugador con todas sus apuestas
+    def __str__(self):
+        return f"{self.player} apuesta por {self.equipo_primero_grupo_A}, {self.equipo_segundo_grupo_A}, {self.equipo_primero_grupo_B}, {self.equipo_segundo_grupo_B}, {self.equipo_primero_grupo_C}, {self.equipo_segundo_grupo_C}, {self.equipo_primero_grupo_D}, {self.equipo_segundo_grupo_D}, {self.equipo_primero_grupo_E}, {self.equipo_segundo_grupo_E}, {self.equipo_primero_grupo_F}, {self.equipo_segundo_grupo_F} en la fecha {self.fecha_hora}"
+
+
 # Modelo para un Equipo de Fútbol
 class Equipo(models.Model):
     nombre = models.CharField(max_length=100)
