@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fase de Grupos</title>
-    <!-- Incluye DataTables CSS y jQuery -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 </head>
 <body>
     <h1>Fase de Grupos</h1>
-    <table id="faseDeGruposTable" class="display">
+    <table id="dataTable" class="display">
         <thead>
             <tr>
                 <th>Player</th>
@@ -26,35 +25,58 @@
                 <th>Segundo grupo C</th>
                 <th>Segundo grupo D</th>
                 <th>Segundo grupo E</th>
-                <th>Segundo grupo F</th>                
+                <th>Segundo grupo F</th>
                 <th>Fecha Hora</th>
             </tr>
         </thead>
         <tbody>
-            {% for item in data %}
-            <tr>
-                <td>{{ item.player }}</td>
-                <td>{{ item.equipo_primero_grupo_A }}</td>
-                <td>{{ item.equipo_segundo_grupo_A }}</td>
-                <td>{{ item.equipo_primero_grupo_B }}</td>
-                <td>{{ item.equipo_segundo_grupo_B }}</td>
-                <td>{{ item.equipo_primero_grupo_C }}</td>
-                <td>{{ item.equipo_segundo_grupo_C }}</td>
-                <td>{{ item.equipo_primero_grupo_D }}</td>
-                <td>{{ item.equipo_segundo_grupo_D }}</td>
-                <td>{{ item.equipo_primero_grupo_E }}</td>
-                <td>{{ item.equipo_segundo_grupo_E }}</td>
-                <td>{{ item.equipo_primero_grupo_F }}</td>
-                <td>{{ item.equipo_segundo_grupo_F }}</td>
-                <td>{{ item.fecha_hora }}</td>
-            </tr>
-            {% endfor %}
         </tbody>
     </table>
 
     <script>
-    $(document).ready(function() {
-        $('#faseDeGruposTable').DataTable();
+    $(document).ready(function() {        
+        $.getJSON('/static/data/data.json', function(data) {
+            var tableData = data.map(function(item) {
+                return [
+                    item.fields.player,
+                    item.fields.equipo_primero_grupo_A,
+                    item.fields.equipo_segundo_grupo_A,
+                    item.fields.equipo_primero_grupo_B,
+                    item.fields.equipo_segundo_grupo_B,
+                    item.fields.equipo_primero_grupo_C,
+                    item.fields.equipo_segundo_grupo_C,
+                    item.fields.equipo_primero_grupo_D,
+                    item.fields.equipo_segundo_grupo_D,
+                    item.fields.equipo_primero_grupo_E,
+                    item.fields.equipo_segundo_grupo_E,
+                    item.fields.equipo_primero_grupo_F,
+                    item.fields.equipo_segundo_grupo_F,
+                    new Date(item.fields.fecha_hora).toLocaleString()
+                ];
+            });
+
+            $('#dataTable').DataTable({
+                data: tableData,
+                columns: [
+                    { title: "Player" },
+                    { title: "Primero grupo A" },
+                    { title: "Primero grupo B" },
+                    { title: "Primero grupo C" },
+                    { title: "Primero grupo D" },
+                    { title: "Primero grupo E" },
+                    { title: "Primero grupo F" },
+                    { title: "Segundo grupo A" },
+                    { title: "Segundo grupo B" },
+                    { title: "Segundo grupo C" },
+                    { title: "Segundo grupo D" },
+                    { title: "Segundo grupo E" },
+                    { title: "Segundo grupo F" },
+                    { title: "Fecha Hora" }
+                ]
+            });
+        }).fail(function() {
+            console.error("No se pudo cargar el archivo data.json.");
+        });
     });
     </script>
 </body>

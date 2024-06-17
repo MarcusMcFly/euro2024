@@ -16,8 +16,10 @@ Including another URLconf
 """
 # urls.py
 from django.contrib import admin
+from django.conf import settings
 from django.urls import path  # Importa la función path
 from futboledos import views
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -42,5 +44,6 @@ urlpatterns = [
 ]
 
 
-
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
