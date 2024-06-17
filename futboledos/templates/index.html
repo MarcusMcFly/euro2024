@@ -37,7 +37,7 @@
 
     <script>
     $(document).ready(function() {        
-        $.getJSON('/static/data/data.json', function(data) {
+        $.getJSON('/data.json', function(data) {
             var tableData = data.map(function(item) {
                 return [
                     item.fields.player,
