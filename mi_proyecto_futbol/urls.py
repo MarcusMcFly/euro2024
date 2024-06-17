@@ -40,7 +40,7 @@ urlpatterns = [
     path('resultados/<int:resultado_id>/', views.detalle_resultado, name='detalle_resultado'),
     path('resultados/<int:resultado_id>/editar/', views.editar_resultado, name='editar_resultado'),
     path('resultados/<int:resultado_id>/borrar/', views.borrar_resultado, name='borrar_resultado'),
-    path('fase-de-grupos/', views.fase_de_grupos_view, name='fase_de_grupos'),
+    path('fase-de-grupos/', views.fase_de_grupos, name='fase_de_grupos'),
 ]
 
 
