@@ -102,19 +102,10 @@ def index(request):
 # views.py
 
 
-def fase_de_grupos_view(request):
+def fase_de_grupos(request):
     data = FaseDeGrupos.objects.all()
-    return render(request, 'fase_de_grupos.html', {'data': data})
+    return render(request, 'fase_de_grupos.html')
 
-
-
-
-# views.py
-
-
-def fase_de_grupos_view(request):
-    data = FaseDeGrupos.objects.all()
-    return render(request, 'fase_de_grupos.html', {'data': data})
 
 
 
