@@ -37,7 +37,7 @@
 
     <script>
     $(document).ready(function() {        
-        $.getJSON('/data.json', function(data) {
+        $.getJSON('https://marcusmcfly.github.io/euro2024/data.json', function(data) {
             var tableData = data.map(function(item) {
                 return [
                     item.fields.player,
