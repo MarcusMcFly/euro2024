@@ -20,8 +20,99 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .easter-egg {
+            color: red;
+            font-weight: bold;
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+
+
 </head>
 <body>
+    
+    
+        <h1>Clasificación (test)</h1>
+        
+        <!-- Table data for Clasificación -->
+        <table id="dataTable_clasif" class="display">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JESU</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>ALBERTO</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>FUENTES</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>TXAU</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>MARCOS</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>CUBI</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="easter-egg">aupa España</div>
+    
+        <script>
+            $(document).ready(function() {
+                $('#dataTable_clasif').DataTable({
+                    "order": [[1, "desc"]]
+                });
+            });
+        </script>
+    
     <h1>Fase de Grupos</h1>
     
     <!-- Table data for Fase de Grupos -->
@@ -94,9 +185,7 @@
         });
     });
     </script>
-
-    <h1>Clasificación</h1>
-        
+    
     <!-- Table data for Clasificación 
     <table id="clasificacion" class="display">
         <thead>
