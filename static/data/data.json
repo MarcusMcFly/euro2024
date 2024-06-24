@@ -1,1 +1,140 @@
-[{"model": "futboledos.fasedegrupos", "pk": 1, "fields": {"player": "MARCOS", "equipo_primero_grupo_A": "GERMANY", "equipo_segundo_grupo_A": "SPAIN", "equipo_primero_grupo_B": "ENGLAND", "equipo_segundo_grupo_B": "FRANCE", "equipo_primero_grupo_C": "BELGIUM", "equipo_segundo_grupo_C": "PORTUGAL", "equipo_primero_grupo_D": "HUNGARY", "equipo_segundo_grupo_D": "CROATIA", "equipo_primero_grupo_E": "DENMARK", "equipo_segundo_grupo_E": "NETHERLANDS", "equipo_primero_grupo_F": "UKRAINE", "equipo_segundo_grupo_F": "TURKEY", "fecha_hora": "2024-06-16T00:00:00Z", "note": "", "created_by": "", "created_datetime": "2024-06-16T00:00:00Z"}}, {"model": "futboledos.fasedegrupos", "pk": 2, "fields": {"player": "TXAU", "equipo_primero_grupo_A": "GERMANY", "equipo_segundo_grupo_A": "CROATIA", "equipo_primero_grupo_B": "ENGLAND", "equipo_segundo_grupo_B": "FRANCE", "equipo_primero_grupo_C": "BELGIUM", "equipo_segundo_grupo_C": "PORTUGAL", "equipo_primero_grupo_D": "SWITZERLAND", "equipo_segundo_grupo_D": "SPAIN", "equipo_primero_grupo_E": "DENMARK", "equipo_segundo_grupo_E": "NETHERLANDS", "equipo_primero_grupo_F": "SLOVAKIA", "equipo_segundo_grupo_F": "CZECHIA", "fecha_hora": "2024-06-16T00:00:00Z", "note": "", "created_by": "", "created_datetime": "2024-06-16T00:00:00Z"}}, {"model": "futboledos.fasedegrupos", "pk": 3, "fields": {"player": "CUBI", "equipo_primero_grupo_A": "GERMANY", "equipo_segundo_grupo_A": "CROATIA", "equipo_primero_grupo_B": "ENGLAND", "equipo_segundo_grupo_B": "FRANCE", "equipo_primero_grupo_C": "BELGIUM", "equipo_segundo_grupo_C": "PORTUGAL", "equipo_primero_grupo_D": "SCOTLAND", "equipo_segundo_grupo_D": "SPAIN", "equipo_primero_grupo_E": "SLOVENIA", "equipo_segundo_grupo_E": "NETHERLANDS", "equipo_primero_grupo_F": "SLOVAKIA", "equipo_segundo_grupo_F": "TURKEY", "fecha_hora": "2024-06-16T00:00:00Z", "note": "", "created_by": "", "created_datetime": "2024-06-16T00:00:00Z"}}, {"model": "futboledos.fasedegrupos", "pk": 4, "fields": {"player": "FUENTES", "equipo_primero_grupo_A": "GERMANY", "equipo_segundo_grupo_A": "SPAIN", "equipo_primero_grupo_B": "ENGLAND", "equipo_segundo_grupo_B": "FRANCE", "equipo_primero_grupo_C": "BELGIUM", "equipo_segundo_grupo_C": "PORTUGAL", "equipo_primero_grupo_D": "HUNGARY", "equipo_segundo_grupo_D": "ITALY", "equipo_primero_grupo_E": "SERBIA", "equipo_segundo_grupo_E": "NETHERLANDS", "equipo_primero_grupo_F": "SLOVAKIA", "equipo_segundo_grupo_F": "TURKEY", "fecha_hora": "2024-06-16T00:00:00Z", "note": "", "created_by": "", "created_datetime": "2024-06-16T00:00:00Z"}}, {"model": "futboledos.fasedegrupos", "pk": 5, "fields": {"player": "ALBERTO", "equipo_primero_grupo_A": "GERMANY", "equipo_segundo_grupo_A": "ITALY", "equipo_primero_grupo_B": "ENGLAND", "equipo_segundo_grupo_B": "FRANCE", "equipo_primero_grupo_C": "BELGIUM", "equipo_segundo_grupo_C": "PORTUGAL", "equipo_primero_grupo_D": "SWITZERLAND", "equipo_segundo_grupo_D": "SPAIN", "equipo_primero_grupo_E": "DENMARK", "equipo_segundo_grupo_E": "NETHERLANDS", "equipo_primero_grupo_F": "UKRAINE", "equipo_segundo_grupo_F": "TURKEY", "fecha_hora": "2024-06-16T00:00:00Z", "note": "", "created_by": "", "created_datetime": "2024-06-16T00:00:00Z"}}, {"model": "futboledos.fasedegrupos", "pk": 6, "fields": {"player": "JESU", "equipo_primero_grupo_A": "GERMANY", "equipo_segundo_grupo_A": "SPAIN", "equipo_primero_grupo_B": "ENGLAND", "equipo_segundo_grupo_B": "FRANCE", "equipo_primero_grupo_C": "BELGIUM", "equipo_segundo_grupo_C": "PORTUGAL", "equipo_primero_grupo_D": "SWITZERLAND", "equipo_segundo_grupo_D": "ITALY", "equipo_primero_grupo_E": "DENMARK", "equipo_segundo_grupo_E": "NETHERLANDS", "equipo_primero_grupo_F": "UKRAINE", "equipo_segundo_grupo_F": "TURKEY", "fecha_hora": "2024-06-16T00:00:00Z", "note": "", "created_by": "", "created_datetime": "2024-06-16T00:00:00Z"}}]
+[
+    {
+        "model": "futboledos.fasedegrupos",
+        "pk": 1,
+        "fields": {
+            "player": "MARCOS",
+            "equipo_primero_grupo_A": "GERMANY",
+            "equipo_segundo_grupo_A": "HUNGARY",
+            "equipo_primero_grupo_B": "SPAIN",
+            "equipo_segundo_grupo_B": "CROATIA",
+            "equipo_primero_grupo_C": "ENGLAND",
+            "equipo_segundo_grupo_C": "DENMARK",
+            "equipo_primero_grupo_D": "FRANCE",
+            "equipo_segundo_grupo_D": "NETHERLANDS",
+            "equipo_primero_grupo_E": "BELGIUM",
+            "equipo_segundo_grupo_E": "UKRAINE",
+            "equipo_primero_grupo_F": "PORTUGAL",
+            "equipo_segundo_grupo_F": "TURKEY",
+            "fecha_hora": "2024-06-16T00:00:00Z",
+            "note": "",
+            "created_by": "",
+            "created_datetime": "2024-06-16T00:00:00Z"
+        }
+    },
+    {
+        "model": "futboledos.fasedegrupos",
+        "pk": 2,
+        "fields": {
+            "player": "TXAU",
+            "equipo_primero_grupo_A": "GERMANY",
+            "equipo_segundo_grupo_A": "SWITZERLAND",
+            "equipo_primero_grupo_B": "CROATIA",
+            "equipo_segundo_grupo_B": "SPAIN",
+            "equipo_primero_grupo_C": "ENGLAND",
+            "equipo_segundo_grupo_C": "DENMARK",
+            "equipo_primero_grupo_D": "FRANCE",
+            "equipo_segundo_grupo_D": "NETHERLANDS",
+            "equipo_primero_grupo_E": "BELGIUM",
+            "equipo_segundo_grupo_E": "SLOVAKIA",
+            "equipo_primero_grupo_F": "PORTUGAL",
+            "equipo_segundo_grupo_F": "CZECHIA",
+            "fecha_hora": "2024-06-16T00:00:00Z",
+            "note": "",
+            "created_by": "",
+            "created_datetime": "2024-06-16T00:00:00Z"
+        }
+    },
+    {
+        "model": "futboledos.fasedegrupos",
+        "pk": 3,
+        "fields": {
+            "player": "CUBI",
+            "equipo_primero_grupo_A": "GERMANY",
+            "equipo_segundo_grupo_A": "SCOTLAND",
+            "equipo_primero_grupo_B": "CROATIA",
+            "equipo_segundo_grupo_B": "SPAIN",
+            "equipo_primero_grupo_C": "ENGLAND",
+            "equipo_segundo_grupo_C": "SLOVENIA",
+            "equipo_primero_grupo_D": "FRANCE",
+            "equipo_segundo_grupo_D": "NETHERLANDS",
+            "equipo_primero_grupo_E": "BELGIUM",
+            "equipo_segundo_grupo_E": "SLOVAKIA",
+            "equipo_primero_grupo_F": "PORTUGAL",
+            "equipo_segundo_grupo_F": "TURKEY",
+            "fecha_hora": "2024-06-16T00:00:00Z",
+            "note": "",
+            "created_by": "",
+            "created_datetime": "2024-06-16T00:00:00Z"
+        }
+    },
+    {
+        "model": "futboledos.fasedegrupos",
+        "pk": 4,
+        "fields": {
+            "player": "FUENTES",
+            "equipo_primero_grupo_A": "GERMANY",
+            "equipo_segundo_grupo_A": "HUNGARY",
+            "equipo_primero_grupo_B": "SPAIN",
+            "equipo_segundo_grupo_B": "ITALY",
+            "equipo_primero_grupo_C": "ENGLAND",
+            "equipo_segundo_grupo_C": "SERBIA",
+            "equipo_primero_grupo_D": "FRANCE",
+            "equipo_segundo_grupo_D": "NETHERLANDS",
+            "equipo_primero_grupo_E": "BELGIUM",
+            "equipo_segundo_grupo_E": "SLOVAKIA",
+            "equipo_primero_grupo_F": "PORTUGAL",
+            "equipo_segundo_grupo_F": "TURKEY",
+            "fecha_hora": "2024-06-16T00:00:00Z",
+            "note": "",
+            "created_by": "",
+            "created_datetime": "2024-06-16T00:00:00Z"
+        }
+    },
+    {
+        "model": "futboledos.fasedegrupos",
+        "pk": 5,
+        "fields": {
+            "player": "ALBERTO",
+            "equipo_primero_grupo_A": "GERMANY",
+            "equipo_segundo_grupo_A": "SWITZERLAND",
+            "equipo_primero_grupo_B": "ITALY",
+            "equipo_segundo_grupo_B": "SPAIN",
+            "equipo_primero_grupo_C": "ENGLAND",
+            "equipo_segundo_grupo_C": "DENMARK",
+            "equipo_primero_grupo_D": "FRANCE",
+            "equipo_segundo_grupo_D": "NETHERLANDS",
+            "equipo_primero_grupo_E": "BELGIUM",
+            "equipo_segundo_grupo_E": "UKRAINE",
+            "equipo_primero_grupo_F": "PORTUGAL",
+            "equipo_segundo_grupo_F": "TURKEY",
+            "fecha_hora": "2024-06-16T00:00:00Z",
+            "note": "",
+            "created_by": "",
+            "created_datetime": "2024-06-16T00:00:00Z"
+        }
+    },
+    {
+        "model": "futboledos.fasedegrupos",
+        "pk": 6,
+        "fields": {
+            "player": "JESU",
+            "equipo_primero_grupo_A": "GERMANY",
+            "equipo_segundo_grupo_A": "SWITZERLAND",
+            "equipo_primero_grupo_B": "SPAIN",
+            "equipo_segundo_grupo_B": "ITALY",
+            "equipo_primero_grupo_C": "ENGLAND",
+            "equipo_segundo_grupo_C": "DENMARK",
+            "equipo_primero_grupo_D": "FRANCE",
+            "equipo_segundo_grupo_D": "NETHERLANDS",
+            "equipo_primero_grupo_E": "BELGIUM",
+            "equipo_segundo_grupo_E": "UKRAINE",
+            "equipo_primero_grupo_F": "PORTUGAL",
+            "equipo_segundo_grupo_F": "TURKEY",
+            "fecha_hora": "2024-06-16T00:00:00Z",
+            "note": "",
+            "created_by": "",
+            "created_datetime": "2024-06-16T00:00:00Z"
+        }
+    }
+]
