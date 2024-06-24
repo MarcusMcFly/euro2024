@@ -3,6 +3,17 @@
 
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4857XSZNX8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4857XSZNX8');
+    </script>
+    <!--End of Google tag (gtag.js) -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fase de Grupos</title>
@@ -12,6 +23,8 @@
 </head>
 <body>
     <h1>Fase de Grupos</h1>
+    
+    <!-- Table data for Fase de Grupos -->
     <table id="dataTable" class="display">
         <thead>
             <tr>
@@ -37,7 +50,7 @@
 
     <script>
     $(document).ready(function() {        
-        $.getJSON('https://marcusmcfly.github.io/euro2024/data.json', function(data) {
+        $.getJSON('https://marcusmcfly.github.io/euro2024/static/data/data.json', function(data) {
             var tableData = data.map(function(item) {
                 return [
                     item.fields.player,
@@ -81,6 +94,59 @@
         });
     });
     </script>
+
+    <h1>Clasificación</h1>
+        
+    <!-- Table data for Clasificación 
+    <table id="clasificacion" class="display">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Puntos totales</th>
+                <th>Aciertos primero de grupo</th>
+                <th>Aciertos segundo de grupo</th>
+                <th>Acierto pase pero no posición</th>
+                <th>Acierto tercero y posición</th>
+                <th>Acierto tercero pero no posiciónF</th>                
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+
+    $(document).ready(function() {        
+        $.getJSON('https://marcusmcfly.github.io/euro2024/clasificacion.json', function(data) {
+            var tableData = data.map(function(item) {
+                return [
+                    item.fields.player,
+                    item.fields.puntos_totales,
+                    item.fields.aciertos_primero_grupo,
+                    item.fields.aciertos_segundo_grupo,
+                    item.fields.acierto_pase_no_posicion,
+                    item.fields.acierto_tercero_posicion,
+                    item.fields.acierto_tercero_no_posicion
+                ];
+            });
+
+            $('#clasificacion').DataTable({
+                data: tableData,
+                columns: [
+                    { title: "Player" },
+                    { title: "Puntos totales" },
+                    { title: "Aciertos primero de grupo" },
+                    { title: "Aciertos segundo de grupo" },
+                    { title: "Acierto pase pero no posición" },
+                    { title: "Acierto tercero y posición" },
+                    { title: "Acierto tercero pero no posición" }
+                ]
+            });
+        }).fail(function() {
+            console.error("No se pudo cargar el archivo clasificacion.json.");
+        });
+    });
+    </script>-->
+
     <footer>
         <p>© 2024 Futboledos para grupo Quinielas Panda. All rights reserved.</p>
     </footer>
