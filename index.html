@@ -59,7 +59,57 @@
             text-align: left;
             margin-top: 20px;
         }
+        .bracket {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .round {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 20px;
+    }
+    .match {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        position: relative;
+    }
+    .team {
+        margin: 5px;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        text-align: center;
+        width: 150px;
+    }
+    .connector {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 20px;
+        height: 2px;
+        background-color: #000;
+    }
+    .connector-vertical {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background-color: #000;
+    }
+    .final {
+        font-weight: bold;
+        background-color: gold;
+    }
     </style>
+
 
 
 </head>
@@ -77,29 +127,29 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>JESU</td>
+                <!--<tr>
+                    <td>JESU fuera de cuentas</td>
                     <td>40</td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td>ALBERTO</td>
-                    <td>30</td>
+                    <td>80</td>
                 </tr>
                 <tr>
                     <td>FUENTES</td>
-                    <td>30</td>
+                    <td>70</td>
                 </tr>
                 <tr>
                     <td>TXAU</td>
-                    <td>25</td>
+                    <td>65</td>
                 </tr>
                 <tr>
                     <td>MARCOS</td>
-                    <td>20</td>
+                    <td>70</td>
                 </tr>
                 <tr>
                     <td>CUBI</td>
-                    <td>15</td>
+                    <td>55</td>
                 </tr>
             </tbody>
         </table>
@@ -113,6 +163,110 @@
             });
         </script>
     
+    <h1>Cuadro Eliminatorio Eurocopa (under construction)</h1>
+   
+    <div class="bracket">
+        <!-- Octavos de Final - Lado Izquierdo -->
+        <div class="round">
+            <div class="match">
+                <div class="team">GERMANY</div>
+                <div class="team">DENMARK</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">SPAIN</div>
+                <div class="team">GEORGIA</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">PORTUGAL</div>
+                <div class="team">SLOVENIA</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">FRANCE</div>
+                <div class="team">BELGIUM</div>
+                <div class="connector"></div>
+            </div>
+        </div>
+        <!-- Cuartos de Final - Lado Izquierdo -->
+        <div class="round">
+            <div class="match">
+                <div class="team">Winner 1</div>
+                <div class="team">Winner 2</div>
+                <div class="connector-vertical"></div>
+            </div>
+            <div class="match">
+                <div class="team">Winner 3</div>
+                <div class="team">Winner 4</div>
+                <div class="connector-vertical"></div>
+            </div>
+        </div>
+        <!-- Semifinales - Lado Izquierdo -->
+        <div class="round">
+            <div class="match">
+                <div class="team">Winner 5</div>
+                <div class="team">Winner 6</div>
+                <div class="connector-vertical"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bracket">
+        <!-- Semifinal -->
+        <div class="round">
+            <div class="match">
+                <div class="team final">Winner 7</div>
+            </div>
+        </div>
+    </div>
+    <div class="bracket">
+        <!-- Semifinales - Lado Derecho -->
+        <div class="round">
+            <div class="match">
+                <div class="team">Winner 8</div>
+                <div class="team">Winner 9</div>
+                <div class="connector-vertical"></div>
+            </div>
+        </div>
+        <!-- Cuartos de Final - Lado Derecho -->
+        <div class="round">
+            <div class="match">
+                <div class="team">Winner 10</div>
+                <div class="team">Winner 11</div>
+                <div class="connector-vertical"></div>
+            </div>
+            <div class="match">
+                <div class="team">Winner 12</div>
+                <div class="team">Winner 13</div>
+                <div class="connector-vertical"></div>
+            </div>
+        </div>
+        <!-- Octavos de Final - Lado Derecho -->
+        <div class="round">
+            <div class="match">
+                <div class="team">ROMANIA</div>
+                <div class="team">NETHERLANDS</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">AUSTRIA</div>
+                <div class="team">TURKEY</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">ENGLAND</div>
+                <div class="team">SLOVAKIA</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">SWITZERLAND</div>
+                <div class="team">ITALY</div>
+                <div class="connector"></div>
+            </div>
+        </div>
+    </div>
+
+
     <h1>Fase de Grupos</h1>
     
     <!-- Table data for Fase de Grupos -->
@@ -186,6 +340,29 @@
     });
     </script>
     
+    <h1>Tabla de Puntuaciones</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acierta posición grupo</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Acierta paso a siguiente ronda pero en otra posición grupo</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>No acierta paso a siguiente ronda</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
     <!-- Table data for Clasificación 
     <table id="clasificacion" class="display">
         <thead>
