@@ -64,59 +64,68 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-    }
-    .round {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin: 0 20px;
-    }
-    .match {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-        position: relative;
-    }
-    .team {
-        margin: 5px;
-        padding: 10px 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #fff;
-        text-align: center;
-        width: 150px;
-    }
-    .connector {
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        width: 20px;
-        height: 2px;
-        background-color: #000;
-    }
-    .connector-vertical {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 2px;
-        height: 40px;
-        background-color: #000;
-    }
-    .final {
-        font-weight: bold;
-        background-color: gold;
-    }
+        }
+        .round {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0 20px;
+        }
+        .match {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .team {
+            margin: 5px;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            text-align: center;
+            width: 150px;
+        }
+        .team8 {
+            margin: 5px;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #25ef0a;
+            text-align: center;
+            width: 150px;
+        }
+        .connector {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+        }
+        .connector-vertical {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 2px;
+            height: 40px;
+            background-color: #000;
+        }
+        .final {
+            font-weight: bold;
+            background-color: gold;
+        }
     </style>
 
-
+<title>Futboledos</title>
 
 </head>
 <body>
     
     
-        <h1>Clasificación (test)</h1>
+    <h1>Clasificación (test)</h1>
         
         <!-- Table data for Clasificación -->
         <table id="dataTable_clasif" class="display">
@@ -127,33 +136,32 @@
                 </tr>
             </thead>
             <tbody>
-                <!--<tr>
-                    <td>JESU fuera de cuentas</td>
-                    <td>40</td>
-                </tr>-->
+                <tr>
+                    <td>JESU</td>
+                    <td>135</td>
+                </tr>
                 <tr>
                     <td>ALBERTO</td>
-                    <td>80</td>
+                    <td>130</td>
                 </tr>
                 <tr>
                     <td>FUENTES</td>
-                    <td>70</td>
+                    <td>115</td>
                 </tr>
                 <tr>
                     <td>TXAU</td>
-                    <td>65</td>
+                    <td>110</td>
                 </tr>
                 <tr>
                     <td>MARCOS</td>
-                    <td>70</td>
+                    <td>115</td>
                 </tr>
                 <tr>
                     <td>CUBI</td>
-                    <td>55</td>
+                    <td>100</td>
                 </tr>
             </tbody>
-        </table>
-        <div class="easter-egg">aupa España</div>
+        </table>        
     
         <script>
             $(document).ready(function() {
@@ -162,6 +170,114 @@
                 });
             });
         </script>
+
+        <div class="easter-egg">aupa España</div>
+
+
+    <h1>Pases a octavos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Pase 1</th>
+                <th>Pase 2</th>
+                <th>Pase 3</th>
+                <th>Pase 4</th>
+                <th>Pase 5</th>
+                <th>Pase 6</th>
+                <th>Pase 7</th>
+                <th>Pase 8</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MARCOS</td>
+                <td>SPAIN</td>
+                <td>GERMANY</td>
+                <td>ITALY</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>CROATIA</td>
+            </tr>
+            <tr>
+                <td>TXAU</td>
+                <td>CROATIA</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>ITALY</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+            </tr>
+            <tr>
+                <td>CUBI</td>
+                <td>CROATIA</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>ITALY</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+            </tr>
+            <tr>
+                <td>FUENTES</td>
+                <td>SPAIN</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>ITALY</td>
+            </tr>
+            <tr>
+                <td>ALBERTO</td>
+                <td>ITALY</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+            </tr>
+            <tr>
+                <td>JESU</td>
+                <td>SPAIN</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>CROATIA</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>ITALY</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Tabla de Puntuaciones Octavos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acierta equipo a siguiente ronda</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>No acierta paso a siguiente ronda</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
     
     <h1>Cuadro Eliminatorio Eurocopa (under construction)</h1>
    
@@ -192,14 +308,13 @@
         <!-- Cuartos de Final - Lado Izquierdo -->
         <div class="round">
             <div class="match">
-                <div class="team">Winner 1</div>
-                <div class="team">Winner 2</div>
+                <div class="team8">GERMANY</div>
+                <div class="team8">SPAIN</div>
                 <div class="connector-vertical"></div>
             </div>
             <div class="match">
                 <div class="team">Winner 3</div>
                 <div class="team">Winner 4</div>
-                <div class="connector-vertical"></div>
             </div>
         </div>
         <!-- Semifinales - Lado Izquierdo -->
@@ -207,7 +322,6 @@
             <div class="match">
                 <div class="team">Winner 5</div>
                 <div class="team">Winner 6</div>
-                <div class="connector-vertical"></div>
             </div>
         </div>
     </div>
@@ -225,7 +339,6 @@
             <div class="match">
                 <div class="team">Winner 8</div>
                 <div class="team">Winner 9</div>
-                <div class="connector-vertical"></div>
             </div>
         </div>
         <!-- Cuartos de Final - Lado Derecho -->
@@ -236,9 +349,8 @@
                 <div class="connector-vertical"></div>
             </div>
             <div class="match">
-                <div class="team">Winner 12</div>
-                <div class="team">Winner 13</div>
-                <div class="connector-vertical"></div>
+                <div class="team8">ENGLAND</div>
+                <div class="team8">SWITZERLAND</div>
             </div>
         </div>
         <!-- Octavos de Final - Lado Derecho -->
@@ -268,8 +380,119 @@
 
 
     <h1>Fase de Grupos</h1>
-    
-    <!-- Table data for Fase de Grupos -->
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Primero grupo A</th>
+                <th>Segundo grupo A</th>
+                <th>Primero grupo B</th>
+                <th>Segundo grupo B</th>
+                <th>Primero grupo C</th>
+                <th>Segundo grupo C</th>
+                <th>Primero grupo D</th>
+                <th>Segundo grupo D</th>
+                <th>Primero grupo E</th>
+                <th>Segundo grupo E</th>
+                <th>Primero grupo F</th>
+                <th>Segundo grupo F</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MARCOS</td>
+                <td>GERMANY</td>
+                <td>HUNGARY</td>
+                <td>SPAIN</td>
+                <td>CROATIA</td>
+                <td>ENGLAND</td>
+                <td>DENMARK</td>
+                <td>FRANCE</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>UKRAINE</td>
+                <td>PORTUGAL</td>
+                <td>TURKEY</td>
+            </tr>
+            <tr>
+                <td>TXAU</td>
+                <td>GERMANY</td>
+                <td>SWITZERLAND</td>
+                <td>CROATIA</td>
+                <td>SPAIN</td>
+                <td>ENGLAND</td>
+                <td>DENMARK</td>
+                <td>FRANCE</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>SLOVAKIA</td>
+                <td>PORTUGAL</td>
+                <td>CZECHIA</td>
+            </tr>
+            <tr>
+                <td>CUBI</td>
+                <td>GERMANY</td>
+                <td>SCOTLAND</td>
+                <td>CROATIA</td>
+                <td>SPAIN</td>
+                <td>ENGLAND</td>
+                <td>SLOVENIA</td>
+                <td>FRANCE</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>SLOVAKIA</td>
+                <td>PORTUGAL</td>
+                <td>TURKEY</td>
+            </tr>
+            <tr>
+                <td>FUENTES</td>
+                <td>GERMANY</td>
+                <td>HUNGARY</td>
+                <td>SPAIN</td>
+                <td>ITALY</td>
+                <td>ENGLAND</td>
+                <td>SERBIA</td>
+                <td>FRANCE</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>SLOVAKIA</td>
+                <td>PORTUGAL</td>
+                <td>TURKEY</td>
+            </tr>
+            <tr>
+                <td>ALBERTO</td>
+                <td>GERMANY</td>
+                <td>SWITZERLAND</td>
+                <td>ITALY</td>
+                <td>SPAIN</td>
+                <td>ENGLAND</td>
+                <td>DENMARK</td>
+                <td>FRANCE</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>UKRAINE</td>
+                <td>PORTUGAL</td>
+                <td>TURKEY</td>
+            </tr>
+            <tr>
+                <td>JESU</td>
+                <td>GERMANY</td>
+                <td>SWITZERLAND</td>
+                <td>SPAIN</td>
+                <td>ITALY</td>
+                <td>ENGLAND</td>
+                <td>DENMARK</td>
+                <td>FRANCE</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>UKRAINE</td>
+                <td>PORTUGAL</td>
+                <td>TURKEY</td>
+            </tr>
+        </tbody>
+    </table>
+  
+    <!-- Table data for Fase de Grupos 
     <table id="dataTable" class="display">
         <thead>
             <tr>
@@ -338,9 +561,9 @@
             console.error("No se pudo cargar el archivo data.json.");
         });
     });
-    </script>
+    </script>-->
     
-    <h1>Tabla de Puntuaciones</h1>
+    <h1>Tabla de Puntuaciones Fase de Grupos</h1>
     <table>
         <thead>
             <tr>
