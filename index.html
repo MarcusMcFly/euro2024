@@ -119,13 +119,131 @@
         }
     </style>
 
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            margin-top: 20px;
+        }
+        canvas {
+            background-color: #fff;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <title>Futboledos</title>
 
 </head>
 <body>
     
+    <h1>Cuadro Eliminatorio Eurocopa</h1>
+   
+    <div class="bracket">
+        <!-- Octavos de Final - Lado Izquierdo -->
+        <div class="round">
+            <div class="match">
+                <div class="team">GERMANY</div>
+                <div class="team">DENMARK</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">SPAIN</div>
+                <div class="team">GEORGIA</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">PORTUGAL</div>
+                <div class="team">SLOVENIA</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">FRANCE</div>
+                <div class="team">BELGIUM</div>
+                <div class="connector"></div>
+            </div>
+        </div>
+        <!-- Cuartos de Final - Lado Izquierdo -->
+        <div class="round">
+            <div class="match">
+                <div class="team8">GERMANY</div>
+                <div class="team8">SPAIN</div>
+                <div class="connector-vertical"></div>
+            </div>
+            <div class="match">
+                <div class="team8">PORTUGAL</div>
+                <div class="team8">FRANCE</div>
+            </div>
+        </div>
+        <!-- Semifinales - Lado Izquierdo -->
+        <div class="round">
+            <div class="match">
+                <div class="team">Winner 5</div>
+                <div class="team">Winner 6</div>
+            </div>
+        </div>
+    </div>
+    <div class="bracket">
+        <!-- Semifinal -->
+        <div class="round">
+            <div class="match">
+                <div class="team final">Winner 7</div>
+            </div>
+        </div>
+    </div>
+    <div class="bracket">
+        <!-- Semifinales - Lado Derecho -->
+        <div class="round">
+            <div class="match">
+                <div class="team">Winner 8</div>
+                <div class="team">Winner 9</div>
+            </div>
+        </div>
+        <!-- Cuartos de Final - Lado Derecho -->
+        <div class="round">
+            <div class="match">
+                <div class="team8">NETHERLANDS</div>
+                <div class="team">Winner 11</div>
+                <div class="connector-vertical"></div>
+            </div>
+            <div class="match">
+                <div class="team8">ENGLAND</div>
+                <div class="team8">SWITZERLAND</div>
+            </div>
+        </div>
+        <!-- Octavos de Final - Lado Derecho -->
+        <div class="round">
+            <div class="match">
+                <div class="team">ROMANIA</div>
+                <div class="team">NETHERLANDS</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">AUSTRIA</div>
+                <div class="team">TURKEY</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">ENGLAND</div>
+                <div class="team">SLOVAKIA</div>
+                <div class="connector"></div>
+            </div>
+            <div class="match">
+                <div class="team">SWITZERLAND</div>
+                <div class="team">ITALY</div>
+                <div class="connector"></div>
+            </div>
+        </div>
+    </div>
+
     
-    <h1>Clasificación (test)</h1>
+    <h1>Clasificación</h1>
         
         <!-- Table data for Clasificación -->
         <table id="dataTable_clasif" class="display">
@@ -138,27 +256,27 @@
             <tbody>
                 <tr>
                     <td>JESU</td>
-                    <td>135</td>
+                    <td>180</td>
                 </tr>
                 <tr>
                     <td>ALBERTO</td>
-                    <td>130</td>
+                    <td>175</td>
                 </tr>
                 <tr>
                     <td>FUENTES</td>
-                    <td>115</td>
+                    <td>160</td>
                 </tr>
                 <tr>
                     <td>TXAU</td>
-                    <td>110</td>
+                    <td>155</td>
                 </tr>
                 <tr>
                     <td>MARCOS</td>
-                    <td>115</td>
+                    <td>145</td>
                 </tr>
                 <tr>
                     <td>CUBI</td>
-                    <td>100</td>
+                    <td>145</td>
                 </tr>
             </tbody>
         </table>        
@@ -170,11 +288,75 @@
                 });
             });
         </script>
+    
 
         <div class="easter-egg">aupa España</div>
 
+        <h1>Clasificación - Evolution</h1>
 
-    <h1>Pases a octavos</h1>
+        <div class="chart-container">
+            <canvas id="scoreChart" width="800" height="400"></canvas>
+        </div>
+    
+        <script>
+            const ctx = document.getElementById('scoreChart').getContext('2d');
+            const data = {
+                labels: ['Start', 'Post Fase de Grupos', 'Post-Octavos'],
+                datasets: [
+                    {
+                        label: 'JESU',
+                        data: [0, 90, 180],
+                        borderColor: 'red',
+                        fill: false
+                    },
+                    {
+                        label: 'ALBERTO',
+                        data: [0, 80, 175],
+                        borderColor: 'blue',
+                        fill: false
+                    },
+                    {
+                        label: 'FUENTES',
+                        data: [0, 70, 160],
+                        borderColor: 'green',
+                        fill: false
+                    },
+                    {
+                        label: 'TXAU',
+                        data: [0, 65, 155],
+                        borderColor: 'purple',
+                        fill: false
+                    },
+                    {
+                        label: 'MARCOS',
+                        data: [0, 70, 145],
+                        borderColor: 'orange',
+                        fill: false
+                    },
+                    {
+                        label: 'CUBI',
+                        data: [0, 55, 145],
+                        borderColor: 'brown',
+                        fill: false
+                    }
+                ]
+            };
+            const config = {
+                type: 'line',
+                data: data,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            };
+            const scoreChart = new Chart(ctx, config);
+        </script>
+
+    <h1>Previsión de Pases a Cuartos</h1>
 
     <table>
         <thead>
@@ -259,7 +441,7 @@
             </tr>
         </tbody>
     </table>
-    <h1>Tabla de Puntuaciones Octavos</h1>
+    <h1>Tabla de Puntuaciones Octavos - Cuartos</h1>
     <table>
         <thead>
             <tr>
@@ -278,108 +460,278 @@
             </tr>
         </tbody>
     </table>
+
+    <h1>Previsión de pases a Semifinales</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Semifinalista 1</th>
+                <th>Semifinalista 2</th>
+                <th>Semifinalista 3</th>
+                <th>Semifinalista 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MARCOS</td>
+                <td>GERMANY</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>TXAU</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>CUBI</td>
+                <td>GERMANY</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>FUENTES</td>
+                <td>SPAIN</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ITALY</td>
+            </tr>
+            <tr>
+                <td>ALBERTO</td>
+                <td>ITALY</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>JESU</td>
+                <td>SPAIN</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Tabla de Puntuaciones Cuartos - Semis</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acierta equipo a siguiente ronda</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>No acierta paso a siguiente ronda</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Previsión de pases a la FINAL y CAMPEÓN y SUBCAMPEÓN de la Eurocopa</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Semifinalista 1</th>
+                <th>Semifinalista 2</th>
+                <th>Semifinalista 3</th>
+                <th>Semifinalista 4</th>
+                <th>Finalista 1</th>
+                <th>Finalista 2</th>
+                <th>Campeón</th>
+                <th>Subcampeón</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MARCOS</td>
+                <td>GERMANY</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>GERMANY</td>
+                <td>FRANCE</td>
+                <td>FRANCE</td>
+                <td>GERMANY</td>
+            </tr>
+            <tr>
+                <td>TXAU</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>GERMANY</td>
+                <td>ENGLAND</td>
+                <td>ENGLAND</td>
+                <td>GERMANY</td>
+            </tr>
+            <tr>
+                <td>CUBI</td>
+                <td>GERMANY</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>GERMANY</td>
+                <td>FRANCE</td>
+                <td>GERMANY</td>
+                <td>FRANCE</td>
+            </tr>
+            <tr>
+                <td>FUENTES</td>
+                <td>SPAIN</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ITALY</td>
+                <td>SPAIN</td>
+                <td>FRANCE</td>
+                <td>SPAIN</td>
+                <td>FRANCE</td>
+            </tr>
+            <tr>
+                <td>ALBERTO</td>
+                <td>ITALY</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>ITALY</td>
+                <td>FRANCE</td>
+                <td>FRANCE</td>
+                <td>ITALY</td>
+            </tr>
+            <tr>
+                <td>JESU</td>
+                <td>SPAIN</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+                <td>ENGLAND</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Tabla de Puntuaciones Semis - Final - Campeón - Subcampeón</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acierta equipo a la final</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>No acierta paso a siguiente ronda</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Acierta campeón</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>Acierta subcampeón</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Campeón/Subcampeón incorrectos</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
     
-    <h1>Cuadro Eliminatorio Eurocopa (under construction)</h1>
-   
-    <div class="bracket">
-        <!-- Octavos de Final - Lado Izquierdo -->
-        <div class="round">
-            <div class="match">
-                <div class="team">GERMANY</div>
-                <div class="team">DENMARK</div>
-                <div class="connector"></div>
-            </div>
-            <div class="match">
-                <div class="team">SPAIN</div>
-                <div class="team">GEORGIA</div>
-                <div class="connector"></div>
-            </div>
-            <div class="match">
-                <div class="team">PORTUGAL</div>
-                <div class="team">SLOVENIA</div>
-                <div class="connector"></div>
-            </div>
-            <div class="match">
-                <div class="team">FRANCE</div>
-                <div class="team">BELGIUM</div>
-                <div class="connector"></div>
-            </div>
-        </div>
-        <!-- Cuartos de Final - Lado Izquierdo -->
-        <div class="round">
-            <div class="match">
-                <div class="team8">GERMANY</div>
-                <div class="team8">SPAIN</div>
-                <div class="connector-vertical"></div>
-            </div>
-            <div class="match">
-                <div class="team">Winner 3</div>
-                <div class="team">Winner 4</div>
-            </div>
-        </div>
-        <!-- Semifinales - Lado Izquierdo -->
-        <div class="round">
-            <div class="match">
-                <div class="team">Winner 5</div>
-                <div class="team">Winner 6</div>
-            </div>
-        </div>
-    </div>
-    <div class="bracket">
-        <!-- Semifinal -->
-        <div class="round">
-            <div class="match">
-                <div class="team final">Winner 7</div>
-            </div>
-        </div>
-    </div>
-    <div class="bracket">
-        <!-- Semifinales - Lado Derecho -->
-        <div class="round">
-            <div class="match">
-                <div class="team">Winner 8</div>
-                <div class="team">Winner 9</div>
-            </div>
-        </div>
-        <!-- Cuartos de Final - Lado Derecho -->
-        <div class="round">
-            <div class="match">
-                <div class="team">Winner 10</div>
-                <div class="team">Winner 11</div>
-                <div class="connector-vertical"></div>
-            </div>
-            <div class="match">
-                <div class="team8">ENGLAND</div>
-                <div class="team8">SWITZERLAND</div>
-            </div>
-        </div>
-        <!-- Octavos de Final - Lado Derecho -->
-        <div class="round">
-            <div class="match">
-                <div class="team">ROMANIA</div>
-                <div class="team">NETHERLANDS</div>
-                <div class="connector"></div>
-            </div>
-            <div class="match">
-                <div class="team">AUSTRIA</div>
-                <div class="team">TURKEY</div>
-                <div class="connector"></div>
-            </div>
-            <div class="match">
-                <div class="team">ENGLAND</div>
-                <div class="team">SLOVAKIA</div>
-                <div class="connector"></div>
-            </div>
-            <div class="match">
-                <div class="team">SWITZERLAND</div>
-                <div class="team">ITALY</div>
-                <div class="connector"></div>
-            </div>
-        </div>
-    </div>
 
+    <h1>Otras previsiones - Extra</h1>
 
-    <h1>Fase de Grupos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Máximo goleador</th>
+                <th>MVP</th>
+                <th>Equipo más goleador</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MARCOS</td>
+                <td>MBAPPÉ</td>
+                <td>MBAPPÉ</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>TXAU</td>
+                <td>HARRY KANE</td>
+                <td>FODEN</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>CUBI</td>
+                <td>MBAPPÉ</td>
+                <td>KROOS</td>
+                <td>FRANCE</td>
+            </tr>
+            <tr>
+                <td>FUENTES</td>
+                <td>MBAPPÉ</td>
+                <td>N. WILLIAMS</td>
+                <td>FRANCE</td>
+            </tr>
+            <tr>
+                <td>ALBERTO</td>
+                <td>CRISTIANO RONALDO</td>
+                <td>MBAPPÉ</td>
+                <td>FRANCE</td>
+            </tr>
+            <tr>
+                <td>JESU</td>
+                <td>MBAPPÉ</td>
+                <td>PEDRI</td>
+                <td>FRANCE</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Tabla de Puntuaciones Extra</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Por cada previsión acertada</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>No acierta previsión</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <h1>Fase de Grupos - Previsión de pases a Octavos</h1>
     <table>
         <thead>
             <tr>
@@ -563,7 +915,7 @@
     });
     </script>-->
     
-    <h1>Tabla de Puntuaciones Fase de Grupos</h1>
+    <h1>Tabla de Puntuaciones Grupos - Octavos</h1>
     <table>
         <thead>
             <tr>
