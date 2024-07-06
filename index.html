@@ -129,7 +129,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 400px;
+            height: 700px;
             margin-top: 20px;
         }
         canvas {
@@ -172,20 +172,20 @@
         <!-- Cuartos de Final - Lado Izquierdo -->
         <div class="round">
             <div class="match">
-                <div class="team8">GERMANY</div>
-                <div class="team8">SPAIN</div>
+                <div class="team">GERMANY</div>
+                <div class="team">SPAIN</div>
                 <div class="connector-vertical"></div>
             </div>
             <div class="match">
-                <div class="team8">PORTUGAL</div>
-                <div class="team8">FRANCE</div>
+                <div class="team">PORTUGAL</div>
+                <div class="team">FRANCE</div>
             </div>
         </div>
         <!-- Semifinales - Lado Izquierdo -->
         <div class="round">
             <div class="match">
-                <div class="team">Winner 5</div>
-                <div class="team">Winner 6</div>
+                <div class="team8">SPAIN</div>
+                <div class="team8">FRANCE</div>
             </div>
         </div>
     </div>
@@ -193,7 +193,7 @@
         <!-- Semifinal -->
         <div class="round">
             <div class="match">
-                <div class="team final">Winner 7</div>
+                <div class="team final">FINAL</div>
             </div>
         </div>
     </div>
@@ -208,13 +208,13 @@
         <!-- Cuartos de Final - Lado Derecho -->
         <div class="round">
             <div class="match">
-                <div class="team8">NETHERLANDS</div>
-                <div class="team">Winner 11</div>
+                <div class="team">NETHERLANDS</div>
+                <div class="team">TURKEY</div>
                 <div class="connector-vertical"></div>
             </div>
             <div class="match">
-                <div class="team8">ENGLAND</div>
-                <div class="team8">SWITZERLAND</div>
+                <div class="team">ENGLAND</div>
+                <div class="team">SWITZERLAND</div>
             </div>
         </div>
         <!-- Octavos de Final - Lado Derecho -->
@@ -256,27 +256,27 @@
             <tbody>
                 <tr>
                     <td>JESU</td>
-                    <td>180</td>
+                    <td>230</td>
                 </tr>
                 <tr>
                     <td>ALBERTO</td>
-                    <td>175</td>
+                    <td>200</td>
                 </tr>
                 <tr>
                     <td>FUENTES</td>
-                    <td>160</td>
+                    <td>210</td>
                 </tr>
                 <tr>
                     <td>TXAU</td>
-                    <td>155</td>
+                    <td>180</td>
                 </tr>
                 <tr>
                     <td>MARCOS</td>
-                    <td>145</td>
+                    <td>170</td>
                 </tr>
                 <tr>
                     <td>CUBI</td>
-                    <td>145</td>
+                    <td>170</td>
                 </tr>
             </tbody>
         </table>        
@@ -301,41 +301,41 @@
         <script>
             const ctx = document.getElementById('scoreChart').getContext('2d');
             const data = {
-                labels: ['Start', 'Post Fase de Grupos', 'Post-Octavos'],
+                labels: ['Start', 'Post Fase de Grupos', 'Post-Octavos', 'Post-Cuartos día 1'],
                 datasets: [
                     {
                         label: 'JESU',
-                        data: [0, 90, 180],
+                        data: [0, 90, 180, 230],
                         borderColor: 'red',
                         fill: false
                     },
                     {
                         label: 'ALBERTO',
-                        data: [0, 80, 175],
+                        data: [0, 80, 175, 200],
                         borderColor: 'blue',
                         fill: false
                     },
                     {
                         label: 'FUENTES',
-                        data: [0, 70, 160],
+                        data: [0, 70, 160, 210],
                         borderColor: 'green',
                         fill: false
                     },
                     {
                         label: 'TXAU',
-                        data: [0, 65, 155],
+                        data: [0, 65, 155, 180],
                         borderColor: 'purple',
                         fill: false
                     },
                     {
                         label: 'MARCOS',
-                        data: [0, 70, 145],
+                        data: [0, 70, 145, 170],
                         borderColor: 'orange',
                         fill: false
                     },
                     {
                         label: 'CUBI',
-                        data: [0, 55, 145],
+                        data: [0, 55, 145, 170],
                         borderColor: 'brown',
                         fill: false
                     }
