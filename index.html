@@ -184,8 +184,8 @@
         <!-- Semifinales - Lado Izquierdo -->
         <div class="round">
             <div class="match">
-                <div class="team8">SPAIN</div>
-                <div class="team8">FRANCE</div>
+                <div class="team">SPAIN</div>
+                <div class="team">FRANCE</div>
             </div>
         </div>
     </div>
@@ -193,7 +193,7 @@
         <!-- Semifinal -->
         <div class="round">
             <div class="match">
-                <div class="team final">FINAL</div>
+                <div class="team final">SPAIN-ENGLAND</div>
             </div>
         </div>
     </div>
@@ -201,8 +201,8 @@
         <!-- Semifinales - Lado Derecho -->
         <div class="round">
             <div class="match">
-                <div class="team8">NETHERLANDS</div>
-                <div class="team8">ENGLAND</div>
+                <div class="team">NETHERLANDS</div>
+                <div class="team">ENGLAND</div>
             </div>
         </div>
         <!-- Cuartos de Final - Lado Derecho -->
@@ -256,7 +256,7 @@
             <tbody>
                 <tr>
                     <td>JESU</td>
-                    <td>255</td>
+                    <td>325</td>
                 </tr>
                 <tr>
                     <td>ALBERTO</td>
@@ -264,11 +264,11 @@
                 </tr>
                 <tr>
                     <td>FUENTES</td>
-                    <td>235</td>
+                    <td>270</td>
                 </tr>
                 <tr>
                     <td>TXAU</td>
-                    <td>205</td>
+                    <td>240</td>
                 </tr>
                 <tr>
                     <td>MARCOS</td>
@@ -301,41 +301,41 @@
         <script>
             const ctx = document.getElementById('scoreChart').getContext('2d');
             const data = {
-                labels: ['Start', 'Post Fase de Grupos', 'Post-Octavos', 'Post-Cuartos día 1', 'Post-Cuartos día 2'],
+                labels: ['Start', 'Post Fase de Grupos', 'Post-Octavos', 'Post-Cuartos día 1', 'Post-Cuartos día 2', 'Post-Semis'],
                 datasets: [
                     {
                         label: 'JESU',
-                        data: [0, 90, 180, 230, 255],
+                        data: [0, 90, 180, 230, 255, 325],
                         borderColor: 'red',
                         fill: false
                     },
                     {
                         label: 'ALBERTO',
-                        data: [0, 80, 175, 200, 225],
+                        data: [0, 80, 175, 200, 225, 225],
                         borderColor: 'blue',
                         fill: false
                     },
                     {
                         label: 'FUENTES',
-                        data: [0, 70, 160, 210, 235],
+                        data: [0, 70, 160, 210, 235, 270],
                         borderColor: 'green',
                         fill: false
                     },
                     {
                         label: 'TXAU',
-                        data: [0, 65, 155, 180, 205],
+                        data: [0, 65, 155, 180, 205, 240],
                         borderColor: 'purple',
                         fill: false
                     },
                     {
                         label: 'MARCOS',
-                        data: [0, 70, 145, 170, 220],
+                        data: [0, 70, 145, 170, 220, 220],
                         borderColor: 'orange',
                         fill: false
                     },
                     {
                         label: 'CUBI',
-                        data: [0, 55, 145, 170, 220],
+                        data: [0, 55, 145, 170, 220, 220],
                         borderColor: 'brown',
                         fill: false
                     }
@@ -356,189 +356,7 @@
             const scoreChart = new Chart(ctx, config);
         </script>
 
-    <h1>Previsión de Pases a Cuartos</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Player</th>
-                <th>Pase 1</th>
-                <th>Pase 2</th>
-                <th>Pase 3</th>
-                <th>Pase 4</th>
-                <th>Pase 5</th>
-                <th>Pase 6</th>
-                <th>Pase 7</th>
-                <th>Pase 8</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>MARCOS</td>
-                <td>SPAIN</td>
-                <td>GERMANY</td>
-                <td>ITALY</td>
-                <td>NETHERLANDS</td>
-                <td>BELGIUM</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-                <td>CROATIA</td>
-            </tr>
-            <tr>
-                <td>TXAU</td>
-                <td>CROATIA</td>
-                <td>GERMANY</td>
-                <td>PORTUGAL</td>
-                <td>NETHERLANDS</td>
-                <td>ITALY</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-                <td>SPAIN</td>
-            </tr>
-            <tr>
-                <td>CUBI</td>
-                <td>CROATIA</td>
-                <td>GERMANY</td>
-                <td>PORTUGAL</td>
-                <td>NETHERLANDS</td>
-                <td>ITALY</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-                <td>SPAIN</td>
-            </tr>
-            <tr>
-                <td>FUENTES</td>
-                <td>SPAIN</td>
-                <td>GERMANY</td>
-                <td>PORTUGAL</td>
-                <td>NETHERLANDS</td>
-                <td>BELGIUM</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-                <td>ITALY</td>
-            </tr>
-            <tr>
-                <td>ALBERTO</td>
-                <td>ITALY</td>
-                <td>GERMANY</td>
-                <td>PORTUGAL</td>
-                <td>NETHERLANDS</td>
-                <td>BELGIUM</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-                <td>SPAIN</td>
-            </tr>
-            <tr>
-                <td>JESU</td>
-                <td>SPAIN</td>
-                <td>GERMANY</td>
-                <td>PORTUGAL</td>
-                <td>NETHERLANDS</td>
-                <td>CROATIA</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-                <td>ITALY</td>
-            </tr>
-        </tbody>
-    </table>
-    <h1>Tabla de Puntuaciones Octavos - Cuartos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Descripción</th>
-                <th>Puntuación</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Acierta equipo a siguiente ronda</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>No acierta paso a siguiente ronda</td>
-                <td>0</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h1>Previsión de pases a Semifinales</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Player</th>
-                <th>Semifinalista 1</th>
-                <th>Semifinalista 2</th>
-                <th>Semifinalista 3</th>
-                <th>Semifinalista 4</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>MARCOS</td>
-                <td>GERMANY</td>
-                <td>NETHERLANDS</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-            </tr>
-            <tr>
-                <td>TXAU</td>
-                <td>GERMANY</td>
-                <td>PORTUGAL</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-            </tr>
-            <tr>
-                <td>CUBI</td>
-                <td>GERMANY</td>
-                <td>NETHERLANDS</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-            </tr>
-            <tr>
-                <td>FUENTES</td>
-                <td>SPAIN</td>
-                <td>NETHERLANDS</td>
-                <td>FRANCE</td>
-                <td>ITALY</td>
-            </tr>
-            <tr>
-                <td>ALBERTO</td>
-                <td>ITALY</td>
-                <td>PORTUGAL</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-            </tr>
-            <tr>
-                <td>JESU</td>
-                <td>SPAIN</td>
-                <td>PORTUGAL</td>
-                <td>FRANCE</td>
-                <td>ENGLAND</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h1>Tabla de Puntuaciones Cuartos - Semis</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Descripción</th>
-                <th>Puntuación</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Acierta equipo a siguiente ronda</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>No acierta paso a siguiente ronda</td>
-                <td>0</td>
-            </tr>
-        </tbody>
-    </table>
-
+   
     <h1>Previsión de pases a la FINAL y CAMPEÓN y SUBCAMPEÓN de la Eurocopa</h1>
 
     <table>
@@ -729,6 +547,192 @@
             </tr>
         </tbody>
     </table>
+
+    <h1>Previsión de pases a Semifinales</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Semifinalista 1</th>
+                <th>Semifinalista 2</th>
+                <th>Semifinalista 3</th>
+                <th>Semifinalista 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MARCOS</td>
+                <td>GERMANY</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>TXAU</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>CUBI</td>
+                <td>GERMANY</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>FUENTES</td>
+                <td>SPAIN</td>
+                <td>NETHERLANDS</td>
+                <td>FRANCE</td>
+                <td>ITALY</td>
+            </tr>
+            <tr>
+                <td>ALBERTO</td>
+                <td>ITALY</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+            <tr>
+                <td>JESU</td>
+                <td>SPAIN</td>
+                <td>PORTUGAL</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Tabla de Puntuaciones Cuartos - Semis</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acierta equipo a siguiente ronda</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>No acierta paso a siguiente ronda</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Previsión de Pases a Cuartos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Pase 1</th>
+                <th>Pase 2</th>
+                <th>Pase 3</th>
+                <th>Pase 4</th>
+                <th>Pase 5</th>
+                <th>Pase 6</th>
+                <th>Pase 7</th>
+                <th>Pase 8</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MARCOS</td>
+                <td>SPAIN</td>
+                <td>GERMANY</td>
+                <td>ITALY</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>CROATIA</td>
+            </tr>
+            <tr>
+                <td>TXAU</td>
+                <td>CROATIA</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>ITALY</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+            </tr>
+            <tr>
+                <td>CUBI</td>
+                <td>CROATIA</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>ITALY</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+            </tr>
+            <tr>
+                <td>FUENTES</td>
+                <td>SPAIN</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>ITALY</td>
+            </tr>
+            <tr>
+                <td>ALBERTO</td>
+                <td>ITALY</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>BELGIUM</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>SPAIN</td>
+            </tr>
+            <tr>
+                <td>JESU</td>
+                <td>SPAIN</td>
+                <td>GERMANY</td>
+                <td>PORTUGAL</td>
+                <td>NETHERLANDS</td>
+                <td>CROATIA</td>
+                <td>FRANCE</td>
+                <td>ENGLAND</td>
+                <td>ITALY</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Tabla de Puntuaciones Octavos - Cuartos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acierta equipo a siguiente ronda</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>No acierta paso a siguiente ronda</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+
     
 
     <h1>Fase de Grupos - Previsión de pases a Octavos</h1>
